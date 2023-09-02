@@ -36,15 +36,5 @@
     "projects/mobile",
     "projects/client",
     "projects/site"
-  ],
-  "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true,
-    "bracketSpacing": true,
-    "arrowParens": "always",
-    "jsxSingleQuote": true,
-    "endOfLine": "lf"
-  }
+  ]
 }

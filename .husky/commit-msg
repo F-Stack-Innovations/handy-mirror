@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+echo
+echo "VERRIFICATION DU FORMAT DU COMMIT:"
+echo
 npx --no -- commitlint --edit ${1}
-echo "COMMIT-MSG: Validation du commit en cours."
+echo
+
+
