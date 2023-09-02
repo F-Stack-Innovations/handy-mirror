@@ -1,2 +1,6 @@
+**/.git
+**/.svn
+**/.hg
+
 # Exclusion de tous les dossiers node_modules dans le projet (racine ou sous-dossiers).
 **/node_modules/

@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "Pretty-quick a été exécuté avec succès"
-npx pretty-quick --staged
+# Vérifie si des fichiers JavaScript existent avant d'exécuter Pretty-Quick
+if [ -n "$(git diff --cached --name-only -- '*.js')" ]; then
+  echo "Pretty-quick a été exécuté avec succès"
+  npx pretty-quick --staged
+fi
