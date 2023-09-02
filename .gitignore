@@ -1,2 +1,2 @@
-# Ignore all node_modules folders at any level
+# Exclusion de tous les dossiers node_modules dans le projet (racine ou sous-dossiers).
 **/node_modules/
