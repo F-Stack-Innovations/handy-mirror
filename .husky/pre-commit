@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "PRE-COMMIT: Veuillez à bien respecter la syntaxe pour un commit"
+echo "Pretty-quick a été exécuté avec succès"
+npx pretty-quick --staged
