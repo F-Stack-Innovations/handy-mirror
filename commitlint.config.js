@@ -131,6 +131,38 @@ module.exports = {
       scope: {
         description:
           'Quel est le contexte des modifications (composant, nom de fichier)',
+        enum: {
+          core: {
+            description:
+              'Modifications liées au cœur du projet, généralement des changements fondamentaux.',
+            title: 'core',
+            emoji: '🔨',
+          },
+          ui: {
+            description:
+              "Modifications de l'interface utilisateur, telles que des mises à jour de conception, des ajouts d'éléments d'interface, etc.",
+            title: 'ui',
+            emoji: '🖼️',
+          },
+          backend: {
+            description:
+              'Modifications concernant la logique et les fonctionnalités côté serveur.',
+            title: 'backend',
+            emoji: '🖥️',
+          },
+          frontend: {
+            description:
+              "Modifications liées à la partie frontale de l'application, y compris l'interface utilisateur et la logique côté client.",
+            title: 'frontend',
+            emoji: '🌐',
+          },
+          devops: {
+            description:
+              "Modifications liées aux opérations de développement, telles que la configuration, le déploiement, l'automatisation, etc.",
+            title: 'devops',
+            emoji: '🚀',
+          },
+        },
       },
       subject: {
         description: 'Écrivez une description concise, à l’impératif',

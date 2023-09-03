@@ -2,9 +2,14 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 echo
-echo "VERRIFICATION DU FORMAT DU COMMIT:"
-echo
-npx --no -- commitlint --edit ${1}
-echo
+echo "VÉRIFICATION DU FORMAT DU COMMIT :"
 
+npx --no -- commitlint --edit "$1"
 
+if [ $? -eq 0 ]; then
+  echo "Ton commit respecte bien la syntaxe établie."
+else
+  echo "Le commit ne respecte pas la syntaxe établie."
+fi
+
+echo
