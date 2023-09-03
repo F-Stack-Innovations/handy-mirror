@@ -4,7 +4,10 @@
   "description": "Projet d'étude voué à être commercialisé",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "git": "npm run git:add && npm run git:commit",
+    "git:add": "git add --all",
+    "git:commit": "npx cz"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cz-commitlint": "^17.7.1",
+    "commitizen": "^4.3.0",
     "eslint": "^8.48.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^9.0.0",
@@ -36,5 +41,10 @@
     "projects/mobile",
     "projects/client",
     "projects/site"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
 }
