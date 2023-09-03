@@ -1,6 +1,37 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Récupère le message du dernier commit
+commit_message=$(git log -n 1 --pretty=format:"%s%B")
+
+# Vérifie si le dernier commit est un git revert
+if echo "$commit_message" | grep -q "Revert"; then
+  echo "Le dernier commit est un git revert, ce commit ne sera pas pris en compte."
+  exit 0
+fi
+
+# Vérifie que le script est appelé avec exactement deux arguments (sujet et corps)
+if [ $# -ne 2 ]; then
+  echo "Erreur : Le script doit être appelé avec un sujet et un corps."
+  exit 1
+fi
+
+# Les arguments 1 et 2 contiennent respectivement le sujet et le corps du commit
+subject="$1"
+body="$2"
+
+# Effectue le commit avec -m 2 (sujet et corps)
+git commit -m "$subject" -m "$body"
+
+# Vérifie si le commit a réussi
+if [ $? -eq 0 ]; then
+  echo "La syntaxe du commit est bien respectée."
+  exit 0
+else
+  echo "Erreur lors du commit. Veuillez corriger le message de commit."
+  exit 1
+fi
+
 echo
 echo "PRETTY-QUICK:"
 echo
