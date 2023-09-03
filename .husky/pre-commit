@@ -1,6 +1,24 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Récupère tous les messages de commit
+commit_messages=$(git log -n 1 --pretty=format:%B)
+
+# Vérifie si le commit contient exactement deux lignes de message
+if [[ $(echo "$commit_messages" | wc -l) -ne 2 ]]; then
+  echo "Erreur : Chaque commit doit contenir un sujet et un corps distincts."
+  exit 1
+fi
+
+# Vérifie si le sujet et le corps ne sont pas vides
+if [[ $(echo "$commit_messages" | head -n 1) == "" ]] || [[ $(echo "$commit_messages" | tail -n 1) == "" ]]; then
+  echo "Erreur : Le sujet et le corps du commit ne peuvent pas être vides."
+  exit 1
+fi
+
+# Si toutes les vérifications passent, le commit est valide
+exit 0
+
 echo
 echo "PRETTY-QUICK:"
 echo
