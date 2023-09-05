@@ -5,9 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "git": "npm run git:add && npm run git:commit",
+    "git": "npm run git:add && npm run git:commit && npm run git:push",
     "git:add": "node ./scripts/git-add.js",
-    "git:commit": "npx cz && node ./scripts/git-push.js"
+    "git:commit": "npx cz",
+    "git:push": "node ./scripts/git-push.js"
   },
   "repository": {
     "type": "git",
