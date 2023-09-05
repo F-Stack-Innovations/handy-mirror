@@ -6,14 +6,22 @@
   "scripts": {
     "test": "npx jest ../../__tests__/api/server.test.js",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "git": "cd ../../ && npm run git:add && npm run git:commit"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0"
   },
   "devDependencies": {
+    "chalk": "^5.3.0",
+    "dotenv": "^16.3.1",
     "eslint": "^8.48.0",
-    "nodemon": "^3.0.1"
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   },
   "keywords": [
     "handy",
