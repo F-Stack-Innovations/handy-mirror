@@ -12,6 +12,7 @@
  */
 require('dotenv').config();
 const express = require('express');
+const morgan = require('morgan');
 
 /**
  * =======================================================================
@@ -25,6 +26,15 @@ const HOST = process.env.HOST || 'localhost';
 
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 5000;
+
+/**
+ * =======================================================================
+ * Mise en places des Middlewares
+ * =======================================================================
+ */
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(morgan('dev'));
 
 app.get('*', (req, res) => {
   res.send('coucou');

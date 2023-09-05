@@ -1,8 +1,6 @@
 const execSync = require('child_process').execSync;
 const inquirer = require('inquirer');
 
-execSync('echo fuckit');
-
 inquirer
   .prompt([
     {
@@ -14,7 +12,7 @@ inquirer
   ])
   .then((answers) => {
     if (answers.pushNow) {
-      inquirer
+      inquire
         .prompt([
           {
             type: 'confirm',
