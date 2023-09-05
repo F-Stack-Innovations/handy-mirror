@@ -12,7 +12,7 @@ inquirer
   ])
   .then((answers) => {
     if (answers.pushNow) {
-      inquire
+      inquirer
         .prompt([
           {
             type: 'confirm',
