@@ -1,6 +1,8 @@
 const execSync = require('child_process').execSync;
 const inquirer = require('inquirer');
 
+execSync('echo fuckit');
+
 inquirer
   .prompt([
     {

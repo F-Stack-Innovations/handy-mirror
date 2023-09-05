@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "git": "npm run git:add && npm run git:commit",
-    "git:add": "git add --all",
-    "git:commit": "npx cz"
+    "git:add": "node ./scripts/git-add.js",
+    "git:commit": "npx cz && node ./scripts/git-push.js"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,8 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "inquirer": "^8.2.6"
   },
   "workspaces": [
     "projects/api",
@@ -46,5 +47,8 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
