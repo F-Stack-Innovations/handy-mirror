@@ -7,17 +7,17 @@ const router = require('express').Router();
 
 /**
  * =======================================================================
- * Import différentes routes
+ * Controllers
  * =======================================================================
  */
-const BaseRoutes = require('./base.v1.routes');
+const BaseController = require('../controllers/Base.controller');
 
 /**
  * =======================================================================
- * Base
+ * BaseController
  * =======================================================================
  */
-router.use(BaseRoutes);
+router.get('/', BaseController.getHome);
 
 /**
  * =======================================================================
