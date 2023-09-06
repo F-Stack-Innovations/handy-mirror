@@ -1,0 +1,10 @@
+**/.git
+**/.svn
+**/.hg
+
+# Exclusion de tous les .env* du projet (racine ou sous-dossiers).
+**/.env
+**/.env.local
+
+# Exclusion de tous les dossiers node_modules dans le projet (racine ou sous-dossiers).
+**/node_modules/

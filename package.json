@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Projet d'étude voué à être commercialisé",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "git": "npm run git:add && npm run git:commit && npm run git:push",
+    "git:add": "node ./scripts/git-add.js",
+    "git:commit": "npx cz",
+    "git:push": "node ./scripts/git-push.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +24,32 @@
   "bugs": {
     "url": "https://github.com/F-Stack-Innovations/handy-mirror/issues"
   },
-  "homepage": "https://github.com/F-Stack-Innovations/handy-mirror#readme"
+  "homepage": "https://github.com/F-Stack-Innovations/handy-mirror#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cz-commitlint": "^17.7.1",
+    "commitizen": "^4.3.0",
+    "eslint": "^8.48.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
+    "inquirer": "^8.2.6"
+  },
+  "workspaces": [
+    "projects/api",
+    "projects/mobile",
+    "projects/client",
+    "projects/site"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }

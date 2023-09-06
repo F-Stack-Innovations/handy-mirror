@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo
+echo "PRETTY-QUICK:"
+echo
+npx pretty-quick # --staged
+echo
