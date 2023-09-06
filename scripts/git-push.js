@@ -34,6 +34,9 @@ inquirer
                   message:
                     "Ok je ne pousserais pas sur la branche develop, en revanche, j'ai besoin du nom de la branche cible :",
                   validate: function (input) {
+                    console.log({
+                      input,
+                    });
                     return input.trim() !== '';
                   },
                 },
