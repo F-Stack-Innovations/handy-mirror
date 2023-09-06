@@ -2,7 +2,6 @@
  * Author: GUILLON Alain
  * version: 0.0.2
  * Created_at: 05/09/2023
- *
  */
 
 /**
@@ -11,6 +10,7 @@
  * =======================================================================
  */
 require('dotenv').config();
+require('./config/database/db');
 const express = require('express');
 const morgan = require('morgan');
 const swaggerJSDoc = require('swagger-jsdoc');
