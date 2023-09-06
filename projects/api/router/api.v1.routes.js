@@ -28,7 +28,7 @@ router.use(BaseRoutes);
 /**
  * @swagger
  * tags:
- *   name: Redirection
+ *   name: Redirect
  *   description: Découvrez comment accéder à la documentation officielle de l'API
  */
 
@@ -42,15 +42,16 @@ router.use(BaseRoutes);
  * @swagger
  * /api/v1/api-handy-docs:
  *   get:
- *     summary: Redirige vers la page d'accueil de la documentation Swagger de l'API
- *     tags: [Redirection]  # Utilisez le nom de la balise correspondante
+ *
+ *     summary: Redirige vers la page d'accueil de la documentation Swagger de l'API dès lors qu'une route ne match pas.
+ *     tags: [Redirect]  # Utilisez le nom de la balise correspondante
  *     responses:
  *       302:
  *         description: Redirection vers la documentation Swagger
  *       500:
  *         description: Une erreur serveur s'est produite.
  */
-router.get('*', (_, res) => res.redirect('/api-handy-docs'));
+router.use('*', (_, res) => res.redirect('/api-handy-docs'));
 
 /**
  * =======================================================================
