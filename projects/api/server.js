@@ -2,7 +2,6 @@
  * Author: GUILLON Alain
  * version: 0.0.2
  * Created_at: 05/09/2023
- *
  */
 
 /**
@@ -11,8 +10,11 @@
  * =======================================================================
  */
 require('dotenv').config();
+require('./config/database/db');
 const express = require('express');
 const morgan = require('morgan');
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUI = require('swagger-ui-express');
 
 /**
  * =======================================================================
@@ -36,6 +38,38 @@ const PORT = process.env.PORT || 5000;
 
 /**
  * =======================================================================
+ * Configuration de Swagger
+ * =======================================================================
+ */
+const swaggerOptions = {
+  definition: {
+    openapi: '3.0.0',
+    explorer: true,
+    info: {
+      title: 'HandyMirror API',
+      version: '1.0.0',
+      description:
+        // eslint-disable-next-line quotes
+        "Découvrez une API concocter à la main pour permettre d'être utiliser avec notre application mobile et surtout notre miroir connecté. (Magic Mirror ²)",
+    },
+    servers: [
+      {
+        url: `http://${HOST}:${PORT}`,
+      },
+    ],
+  },
+  apis: ['./router/*.js', './controllers/*.js'],
+};
+
+const swaggerSpec = swaggerJSDoc(swaggerOptions);
+app.use(
+  '/api/v1/api-handy-docs',
+  swaggerUI.serve,
+  swaggerUI.setup(swaggerSpec),
+);
+
+/**
+ * =======================================================================
  * Mise en places des Middlewares
  * =======================================================================
  */
@@ -53,10 +87,10 @@ app.use('/api/v1', routerApiV1);
 
 /**
  * =======================================================================
- * Redirection vers la route de base (à modifier pour afficher la doc swagger)
+ * Redirection vers la documentation de l'API avec Swagger
  * =======================================================================
  */
-app.get('*', (_, res) => res.redirect('/api/v1'));
+app.get('*', (_, res) => res.redirect('/api/v1/api-handy-docs'));
 
 /**
  * =======================================================================
