@@ -1,3 +1,8 @@
 {
-  "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "iconixar.fluent-icons", // Fluent Icons
+    "microsoft.vscode-icons" // Material Icon Theme
+  ]
 }

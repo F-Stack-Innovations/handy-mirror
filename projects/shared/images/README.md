@@ -1,4 +1,4 @@
-# Dossier "shared"
+# Dossier "images"
 
 Le dossier "shared" peut être utilisé pour stocker des éléments communs qui sont partagés entre plusieurs projets de votre monorepo. Cela peut inclure des bibliothèques, des composants, des utilitaires ou d'autres éléments qui sont utilisés à travers différents projets.
 

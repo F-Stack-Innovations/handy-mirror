@@ -1,0 +1,16 @@
+{
+    // Utiliser une tabulation de 4 espaces
+    "editor.tabSize": 4,
+
+    // Insérer des espaces au lieu de tabulations
+    "editor.insertSpaces": true,
+
+    // Envelopper les lignes pour améliorer la lisibilité
+    "editor.wordWrap": "on",
+
+    // Appliquer le formatage automatique lors de la sauvegarde
+    "editor.formatOnSave": true,
+
+    // Utiliser Prettier comme formateur par défaut
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
