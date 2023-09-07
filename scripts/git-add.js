@@ -46,7 +46,9 @@ if (response.toLowerCase() === 'oui' || response.toLowerCase() === 'y') {
 // Ajoute tous les fichiers modifiés ou créés avec "git add -A"
 try {
   execSync('git add -A');
-  console.log('Tous les fichiers modifiés ou créés ont été ajoutés au commit.');
+  console.log(
+    'Toutes les modifications et créations de fichiers ont été incluses dans le commit.',
+  );
 } catch (error) {
   console.error(
     "Une erreur s'est produite lors de l'ajout des fichiers au commit :",
