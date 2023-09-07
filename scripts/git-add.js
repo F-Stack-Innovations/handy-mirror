@@ -30,6 +30,7 @@ if (response.toLowerCase() === 'oui' || response.toLowerCase() === 'y') {
   // Ajoute les fichiers saisis
   if (filesToAdd.trim() !== '') {
     const filesArray = filesToAdd.split(' ');
+    console.log({ files: filesArray });
 
     filesArray.forEach((file) => {
       try {
