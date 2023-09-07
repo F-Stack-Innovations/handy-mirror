@@ -14,11 +14,6 @@ const bcrypt = require('bcrypt');
  */
 const UserModel = require('../models/User.model');
 
-/**
- * =======================================================================
- * Controllers
- * =======================================================================
- */
 const postSignUp = async (req, res) => {
   try {
     // Décomposition

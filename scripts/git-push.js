@@ -32,11 +32,9 @@ inquirer
                   type: 'input',
                   name: 'branchName',
                   message:
-                    "Ok je ne pousserais pas sur la branche develop, en revanche, j'ai besoin du nom de la branche cible :",
+                    'Je ne vais pas pousser sur la branche develop, cependant, pourriez-vous me fournir le nom de la branche cible ?',
                   validate: function (input) {
-                    console.log({
-                      input,
-                    });
+                    console.log(input);
                     return input.trim() !== '';
                   },
                 },
@@ -57,7 +55,7 @@ inquirer
         });
     } else {
       console.log(
-        "c'est noté, vous aurez la possibilité de pousser les modifications plus tard.",
+        "D'accord, vous aurez l'opportunité de pousser les modifications ultérieurement.",
       );
     }
   })
