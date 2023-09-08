@@ -3,8 +3,46 @@
     "name": "mobile",
     "slug": "mobile",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.CAMERA_ROLL"
+      ],
+      "package": "com.handysolution.handymirrorapp"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Acceptez-vous $(PRODUCT_NAME) a accèder à votre caméra de pouvoir stocker votre photo pour accéder à la reconnaissance du miroir magique."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photoPermission": "Acceptez-vous $(PRODUCT_NAME) a accèder à vos photos afin de définir une image de profile"
+        }
+      ]
     ]
   }
 }
