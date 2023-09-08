@@ -14,7 +14,7 @@ import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 
 // Remplace dotenv
-import configSingleton from '../config/settings/Configuration';
+import configSingleton from '../../config/settings/Configuration';
 
 // Utilitaire
 import Tools from '../../utilities/Tools'; // charge index.js

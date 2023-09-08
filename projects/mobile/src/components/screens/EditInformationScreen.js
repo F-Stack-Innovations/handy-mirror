@@ -27,7 +27,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';
 
 // Remplace dotenv
-import configSingleton from '../config/settings/Configuration';
+import configSingleton from '../../config/settings/Configuration';
 
 // Utilitaires
 import Tools from '../../utilities/Tools'; // charge index.js

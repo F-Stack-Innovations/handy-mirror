@@ -15,7 +15,7 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Remplace dotenv
-import configSingleton from '../config/settings/Configuration';
+import configSingleton from '../../config/settings/Configuration';
 
 // Singleton (Configuration)
 const Config = {
