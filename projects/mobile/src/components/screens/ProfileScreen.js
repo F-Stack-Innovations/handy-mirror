@@ -145,7 +145,7 @@ const ProfileScreen = ({ photoUri }) => {
             source={
               photoUri
                 ? { uri: photoUri }
-                : require('../assets/images/loader.gif')
+                : require('../../../assets/images/loader.gif')
             }
             style={{
               width: 200,
@@ -164,7 +164,7 @@ const ProfileScreen = ({ photoUri }) => {
               source={
                 userData.photoProfile
                   ? { uri: userData.photoProfile }
-                  : require('../assets/images/Default_UserProfilePicture1.png')
+                  : require('../../../assets/images/Default_UserProfilePicture1.png')
               }
             />
             <Text style={styles.message}>{`Hi ${userData.firstname}, `}</Text>
@@ -202,7 +202,7 @@ const ProfileScreen = ({ photoUri }) => {
                   source={
                     photoUri
                       ? { uri: photoUri }
-                      : require('../assets/images/loader.gif')
+                      : require('../../../assets/images/loader.gif')
                   }
                   style={{
                     width: 100,
