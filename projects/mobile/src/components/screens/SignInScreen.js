@@ -97,7 +97,7 @@ const SignInScreen = () => {
         <Image
           style={styles.formImage}
           resizeMode="cover"
-          source={require('../assets/images/maincoucou03-1.png')}
+          source={require('../../../assets/images/main.png')}
         />
         <View style={styles.inputContainer}>
           <MyInputText
