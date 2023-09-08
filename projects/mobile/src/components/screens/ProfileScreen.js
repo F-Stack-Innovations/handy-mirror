@@ -24,7 +24,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Remplace dotenv
-import configSingleton from '../config/settings/Configuration';
+import configSingleton from '../../config/settings/Configuration';
 
 // Styles
 import Tools from '../../utilities/Tools'; // charge index.js

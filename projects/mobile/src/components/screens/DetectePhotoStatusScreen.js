@@ -25,7 +25,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import configSingleton from '../../config/settings/Configuration';
 
 // Utilitaire
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 import { Alert } from 'react-native';
 
 const DetectePhotoStatusScreen = () => {
