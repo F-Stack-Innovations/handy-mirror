@@ -18,10 +18,10 @@ import axios from 'axios';
 // import AppLoading from 'expo-app-loading';
 
 // Utilitaire
-import Tools from '../tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 // Screens
-import UserProfilePicture from '../Component/UserProfilePicture';
+import UserProfilePicture from '../common/UserProfilePicture';
 
 const HomeScreen = () => {
   // let [fontsLoaded] = useFonts({

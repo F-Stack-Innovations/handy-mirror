@@ -21,7 +21,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 
 // Utilitaires
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 const ContactScreen = () => {
   const navigation = useNavigation();

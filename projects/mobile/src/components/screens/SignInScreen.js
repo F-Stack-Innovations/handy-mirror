@@ -24,10 +24,10 @@ const Config = {
 };
 
 // Utilitaire
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 // Composant
-import MyInputText from '../components/MyInputText';
+import MyInputText from '../common/MyInputText';
 
 const SignInScreen = () => {
   // Singleton (Configuration)

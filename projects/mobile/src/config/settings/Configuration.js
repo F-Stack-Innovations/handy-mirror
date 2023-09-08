@@ -39,6 +39,6 @@ class Configuration {
 }
 
 // Création d'un Singleton (Instance Unique)
-const configSingleton = new Configuration('192.168.1.12', '3000', '');
+const configSingleton = new Configuration('192.168.1.12', '8080', '');
 
 export default configSingleton;
