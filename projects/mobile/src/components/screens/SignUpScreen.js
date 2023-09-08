@@ -17,10 +17,10 @@ import axios from 'axios';
 import configSingleton from '../config/settings/Configuration';
 
 // Utilitaire
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 // Composants
-import MyInputText from '../components/MyInputText';
+import MyInputText from '../common/MyInputText';
 
 const SignUpScreen = () => {
   // Singleton (Configuration)

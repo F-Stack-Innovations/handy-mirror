@@ -11,7 +11,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, TextInput } from 'react-native';
 
 // Utilitaires
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 const MyInputText = ({ placeholder, value, onChangeText, name }) => {
   return (

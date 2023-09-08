@@ -27,7 +27,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import configSingleton from '../config/settings/Configuration';
 
 // Styles
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 const ProfileScreen = ({ photoUri }) => {
   // Singleton (Configuration)

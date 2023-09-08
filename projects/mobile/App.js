@@ -22,20 +22,20 @@ import { StatusBar } from 'expo-status-bar';
 import { AntDesign } from '@expo/vector-icons';
 
 // Utilitaire
-import Tools from './utilities/Tools'; // charge index.js
+import Tools from './src/utilities/Tools'; // charge index.js
 
 // Screens
-import SignInScreen from './screens/SignInScreen';
-import SignUpScreen from './screens/SignUpScreen';
-// import HomeScreen from './screens/HomeScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import SettingsScreen from './screens/SettingsScreen';
-import EditInformationScreen from './screens/EditInformationScreen';
-import ContactScreen from './screens/ContactScreen';
-import DetectePhotoFaceScreen from './screens/DetectePhotoFaceScreen';
-import DetectePhotoLeftProfileScreen from './screens/DetectePhotoLeftProfileScreen';
-import DetectePhotoRightProfileScreen from './screens/DetectePhotoRightProfileScreen';
-import DetectePhotoStatusScreen from './screens/DetectePhotoStatusScreen';
+import SignInScreen from './src/components/screens/SignInScreen';
+import SignUpScreen from './src/components/screens/SignUpScreen';
+// import HomeScreen from './src/components/screens/HomeScreen';
+import ProfileScreen from './src/components/screens/ProfileScreen';
+import SettingsScreen from './src/components/screens/SettingsScreen';
+import EditInformationScreen from './src/components/screens/EditInformationScreen';
+import ContactScreen from './src/components/screens/ContactScreen';
+import DetectePhotoFaceScreen from './src/components/screens/DetectePhotoFaceScreen';
+import DetectePhotoLeftProfileScreen from './src/components/screens/DetectePhotoLeftProfileScreen';
+import DetectePhotoRightProfileScreen from './src/components/screens/DetectePhotoRightProfileScreen';
+import DetectePhotoStatusScreen from './src/components/screens/DetectePhotoStatusScreen';
 
 function OpeningScreen({ navigation }) {
   return (

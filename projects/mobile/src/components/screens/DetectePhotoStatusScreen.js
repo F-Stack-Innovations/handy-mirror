@@ -22,7 +22,7 @@ import { Entypo } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Remplace dotenv
-import configSingleton from '../config/settings/Configuration';
+import configSingleton from '../../config/settings/Configuration';
 
 // Utilitaire
 import Tools from '../utilities/Tools'; // charge index.js

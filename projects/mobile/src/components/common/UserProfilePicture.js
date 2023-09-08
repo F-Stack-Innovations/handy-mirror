@@ -10,7 +10,7 @@ import React from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 
 // Utilitaire
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 const UserProfilePicture = ({ photoUri, onPhotoPress }) => {
   return (
@@ -19,7 +19,7 @@ const UserProfilePicture = ({ photoUri, onPhotoPress }) => {
         source={
           photoUri
             ? { uri: photoUri }
-            : require('../assets/images/Default_UserProfilePicture.png')
+            : require('../../../assets/images/Default_UserProfilePicture.png')
         }
         style={{
           width: 100,

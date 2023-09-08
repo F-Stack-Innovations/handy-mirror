@@ -20,7 +20,7 @@ import {
 import { useState } from 'react';
 
 // Utilitaire
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 const SettingsScreen = () => {
   const navigation = useNavigation();

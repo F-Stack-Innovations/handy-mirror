@@ -12,7 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Entypo, MaterialCommunityIcons } from '@expo/vector-icons';
 
 // Utilitaire
-import Tools from '../utilities/Tools'; // charge index.js
+import Tools from '../../utilities/Tools'; // charge index.js
 
 const DetectePhotoRightProfileScreen = () => {
   const navigation = useNavigation();
